@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <style>
+        .load{
+            position: absolute;
+
+            top: 30%;
+            left: 50%;
+
+        }
+        #loading{
+            position: relative;
+            top: -10px;
+            left: 10px;
+        }
+        .init{
+            background-color: antiquewhite;
+        }
+        body{
+            /* background-image: url(/img/superMarket.jpg); */
+        }
+    </style>
+</head>
+<body class="init" onload="init()">
+    <div class="load">
+        <img src="/gif/ajax-loader.gif" alt="">
+        <b id="loading">網頁載入中，請稍候...</b>
+    </div>
+    <button class="onload">End</button>
+    
+    <script>
+        function init(){
+            // $('.load').css('visibility','hidden');
+            $('body').removeClass('init');
+            }
+        
+        $(function(){
+            $('.onload').on('click',function(){
+                console.log(window);
+                $('.load').css('visibility','hidden');
+            });
+            
+
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</body>
+</html>

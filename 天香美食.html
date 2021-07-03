@@ -50,8 +50,15 @@
 
 </head>
 
-<body>
+<body class="init" onload="init()">
     <link rel="stylesheet" href="/css/header.css">
+    
+    <div class="load">
+        <link rel="stylesheet" href="/網頁載入中/loading.css">
+        
+        <img src="/gif/ajax-loader.gif" alt="">
+        <b id="loading">網頁載入中，請稍候...</b>
+    </div>
 
 
 
@@ -256,6 +263,7 @@
     <script src="/js/index.js"></script>
     <!-- <script src="/js/animation.js"></script> -->
     <script src="js/0702-toggleList.js"></script>
+    <script src="/網頁載入中/loading.js"></script>
 </body>
 
 </html>

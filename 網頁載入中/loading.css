@@ -1,0 +1,18 @@
+.load{
+    position: absolute;
+
+    top: 30%;
+    left: 50%;
+
+}
+#loading{
+    position: relative;
+    top: -10px;
+    left: 10px;
+}
+.init{
+    background-color: antiquewhite;
+}
+body{
+    /* background-image: url(/img/superMarket.jpg); */
+}
