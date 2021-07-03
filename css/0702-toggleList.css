@@ -1,0 +1,19 @@
+.tog {
+    margin-left: 20%;
+    position: absolute;
+    top: 50px;
+    display: none;
+}
+.tog ul{
+    width: 150px;
+    height: 180px;
+    background-color: #fa0;
+    float: left;
+    margin: 20px;
+}
+.tog >ul >li{
+    color: black;
+    list-style: none;
+    padding: 10px;
+
+}

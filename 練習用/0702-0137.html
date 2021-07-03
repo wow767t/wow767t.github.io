@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <style>
+        body {
+            /* display: block; */
+            font-size: 32px;
+        }
+
+        .mydiv {
+            float: left;
+            width: 300px;
+            height: 300px;
+            background-color: #fa0;
+            margin: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="mydiv">
+        <h3>119</h3>
+        <select name="qty" id="">
+            <option value="1">1包</option>
+            <option value="2">2包</option>
+            <option value="223">223包</option>
+        </select>
+        <hr>
+        <p >..</p>
+    </div>
+    <div class="mydiv">
+        <h3>219</h3>
+        <select name="qty" id="">
+            <option value="1">1包</option>
+            <option value="2">2包</option>
+            <option value="223">223包</option>
+        </select>
+        <hr>
+        <p >..</p>
+    </div>
+    
+
+<foot class="btn"></foot>
+    <button id="btn1">test btn</button>
+    <button id="btn2">remove btn</button>
+    <button id="btn3">JQ btn</button>
+
+</foot>
+
+    <script>
+        $(function () {
+
+            $('#btn1').on('click', function () {
+                $(function () {
+                    $('div').addClass('mydiv');
+                });
+            });
+
+            $('#btn2').on('click', function () {
+                $(function () {
+                    $('div').removeClass('mydiv');
+                });
+            });
+
+            $('#btn3').on('click', function () {
+                $();
+                var p = parseInt($('h3').text());
+                var q = parseInt($('div > select').val());
+                $('p').text(p*q);
+                console.log(q);
+            });
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

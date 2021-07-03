@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hrr{
+            height: 10px;
+            width: 100px;
+            background-color: #fa0;
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="/css/searchBar.css">
+    <div id="logo"><img src="/img/logo.png"></div>
+    <hr id="hrr">
+    <br><br><br><br>
+
+    <div>
+        <input id="searchBar" type="text" placeholder="搜尋..">
+        <button type="submit"></button>
+
+    </div>
+    <br><br><br><br>
+
+    <input type="text" id="typeBar" oninput="show()">
+    <input type="number" name="" id="numBar" oninput="show2()">
+    <h3 id="p119">119</h3>
+    <p id="test"></p>
+    <script>
+        function show(){
+            var x = document.getElementById('typeBar').value;
+            document.getElementById('test').innerText = x
+        }
+        function show2(){
+            var p =parseInt(document.getElementById('p119').innerText);
+            var x = document.getElementById('numBar').value;
+            result = p * x;
+            document.getElementById('test').innerText = result
+        }
+
+    </script>
+    <script src="/js/animation.js"></script>
+
+</body>
+</html>

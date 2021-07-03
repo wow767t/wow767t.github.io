@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <style>
+        .ani{
+            width: 100px;
+            height: 300px;
+            background-color: #fa0;
+            display: none;
+        }
+        ul{
+            list-style: none
+            
+        }
+        .wrap{
+            margin: 100px auto 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrap >ul >li{
+            float: left;
+        }
+        .wrap li ul{
+            padding: 20px;
+            display: none;
+            position: absolute;
+
+        }
+        .wrap a{
+            text-decoration: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">Start</button>
+    <hr>
+    <div class="ani"></div>
+
+    <div class="wrap">
+        <ul>
+            <li><a href="">選單1</a>
+                <ul>
+                    <li><a href="">1-1</a></li>
+                    <li><a href="">1-2</a></li>
+                </ul>
+            </li>
+            <li><a href="">選單2</a>
+                <ul>
+                    <li>2-1</li>
+                </ul>
+            </li>
+            <li><a href="">選單3</a>
+            <ul>
+                <li>3-1</li>
+            </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $('#btn1').mouseenter(function(){
+            console.log($(this));
+            $('.ani').slideDown(1000).slideUp(1000);
+        });
+
+        $('.wrap > ul >li').mouseenter(function(){
+            console.log($(this));
+            $('.wrap li ul').slideDown();
+        });
+        $('.wrap > ul >li').mouseleave(function(){
+            console.log($(this));
+            $('.wrap li ul').slideUp();
+        });
+    </script>
+</body>
+</html>

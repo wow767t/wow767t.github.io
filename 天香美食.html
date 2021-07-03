@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/jquery-3.6.0.js"></script>
+    <title>天香美食</title>
+    <style>
+        li {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        #line {
+            width: 170px;
+        }
+
+        #dist {
+            border: dashed 1px gray;
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        #sell {
+            color: red;
+            font-size: 30px;
+            padding-left: 5px;
+            padding-bottom: 0px;
+            padding-right: 20px;
+            position: relative;
+            top: 8px;
+        }
+
+        #myLink:hover {
+            color: gold;
+            font-size: 20px;
+        }
+
+        iframe {
+            /* position: relative;
+    left: 320px;
+    top: -350px; */
+            box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.548);
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <link rel="stylesheet" href="/css/header.css">
+
+
+
+    <nav>
+        <!-- <div class="navSide"> -->
+        <div class="navItem"><a href="#order">冷凍食品</a></div>
+        <hr>
+        <div class="navItem">蔬菜</div>
+        <hr>
+        <div class="navItem">水果</div>
+        <hr>
+        <div class="navItem">肉品</div>
+        <hr>
+        <div class="navItem">海鮮</div>
+        <hr>
+        <div class="navItem">寵物食品</div>
+        <hr>
+        <div class="navItem">品牌專區 | 天香美食</div>
+        <hr>
+        <!-- </div> -->
+    </nav>
+    <!-- toggleList測試 -->
+    <link rel="stylesheet" href="/css/0702-toggleList.css">
+
+    <div class="tog">
+        <ul>
+            <li>1-1</li>
+            <li>1-1</li>
+            <li>1-1</li>
+        </ul>
+        <ul>
+
+        </ul>
+    </div>
+
+
+    <!-- 測試功能按鈕 -->
+    <button id="ckBtn" style="position: absolute;
+            right: 0px;
+            top: 120px;
+            font-size: 20px;
+            display: none;
+            ">測試按鈕</button>
+
+    <!-- 測試功能按鈕 -->
+    <button id="listBtn" style="position: absolute;
+            right: 0px;
+            top: 160px;
+            font-size: 20px;
+            display: none;
+            ">list按鈕</button>
+    <!-- <button id="btn3">btn3</button> -->
+
+    <main>
+        <!-- 產品1 -->
+        <div class="pdBox">
+            <img id="pdImg" src="/img/comingSoon2.jpg" alt="">
+            <div class="pdTitle">韭菜 | 高麗菜水餃</div>
+            <div class="pdDesc">
+                水餃有韭菜高麗菜兩種，每包25粒。
+            </div>
+
+            <b>$</b>
+            <b id="sell">110</b>
+            <input type="number" name="" id="qty119" oninput="thisSum0()" min="0" max="20" step="1">
+            總計：<span id="sum119">____</span>
+            <button class="btnOri btnHover">立即購買</button>
+            <button class="btnOri btnHover" id="addCart">加入購物車</button>
+        </div>
+        <!-- 產品2 -->
+        <div class="pdBox">
+            <img id="pdImg" src="/img/comingSoon2.jpg" alt="">
+            <div class="pdTitle">鮮蝦大餛飩</div>
+            <div class="pdDesc">
+                鮮蝦大餛飩 <br>
+                每包 20 粒
+            </div>
+
+            <b>$</b>
+            <b id="sell">160</b>
+            <input type="number" name="" id="qty119" oninput="thisSum1()" min="0" max="20" step="1">
+            總計：<span id="sum119">____</span>
+            <button class="btnOri btnHover">立即購買</button>
+            <button class="btnOri btnHover" id="addCart">加入購物車</button>
+        </div>
+
+        <!-- 產品3 -->
+        <div class="pdBox">
+            <img id="pdImg" src="/img/chilli_72.jpg" alt="">
+            <div class="pdTitle">天香特調辣醬</div>
+            <div class="pdDesc">
+                天香特調辣醬每瓶160元。
+            </div>
+
+            <b>$</b>
+            <b id="sell">160</b>
+            <input type="number" name="" id="qty119" oninput="thisSum2()" min="0" max="20" step="1">
+            總計：<span id="sum119">____</span>
+            <button class="btnOri btnHover">立即購買</button>
+            <button class="btnOri btnHover" id="addCart">加入購物車</button>
+
+        </div>
+
+        <!-- 產品4 -->
+        <div class="pdBox">
+            <img id="pdImg" src="/img/comingSoon.jpg" alt="">
+            <div class="pdTitle">素水餃140 | 瓠瓜130 | 泡菜150 元/包</div>
+            <div class="pdDesc">
+                預計8月上市，現在預購享早鳥優惠：<br><br>
+                每包優惠 10元 / 包 或 領取天香特調辣醬小巧的嚐鮮瓶
+            </div>
+
+            <b>$</b>
+            <b id="sell">---</b>
+            <input type="number" name="" id="qty119" oninput="" min="0" max="20" step="1">
+            總計：<span id="sum119">____</span>
+            <button class="btnOri btnHover">立即購買</button>
+            <button class="btnOri btnHover" id="addCart">加入購物車</button>
+
+        </div>
+
+    </main>
+
+
+    <aside class="linkBox">
+        <div></div>
+
+    </aside>
+
+    <footer>
+        <main class="ftMainBox">
+
+            <div class="ftBox">
+                <div class="ftTitle">天香美食 | 健康小舖</div>
+                <ul>
+                    <div>天香美食有感疫情逐漸升溫之際</div>
+                    <div>擴大推廣鼓勵人人防疫自我防護</div>
+                    <div>建議大家可購買天香冷凍食品</div>
+                    <div>回家自行健康煮</div>
+                    <div>也是一種不錯的選擇</div>
+                </ul>
+            </div>
+            <hr>
+            <div class="ftBox">
+                <div class="ftTitle">購物須知</div>
+                <ul>
+                    <div>每筆訂單購滿 700元</div>
+                    <div>即可免費宅配到府 (限台中市區)</div>
+                    <div id="dist">
+                        中區、東區、西區、南區、北區、<br> 西屯區、南屯區、北屯區
+                    </div>
+                    <br>
+                    <div>外縣市(含改制前的台中縣各鄉鎮)</div>
+                    <div>滿3000元 免宅配運費</div>
+                    <div>(未滿者冷凍宅配運費自付250元)</div>
+                </ul>
+            </div>
+            <hr>
+            <div class="ftBox">
+                <div class="ftTitle" id="order">訂購方式</div>
+                <ul>
+                    <div>Line ID</div>
+                    <div><img src="/img/Line594354.jpg" id="line"></div>
+                    <div>
+                        <a href="https://line.me/ti/p/JfKAZbkat1" id="myLink">天香美食 張武治</a>
+                    </div>
+                    <div>
+                        <a href="tel:+886-937550105" id="myLink">訂購專線：0937-550-105</a>
+                    </div>
+                    <div>自行取貨金額不限（需先連絡）</div>
+                    <div><a id=""
+                            href="https://www.google.com.tw/maps/place/406%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80%E7%B6%8F%E9%81%A0%E8%B7%AF%E4%BA%8C%E6%AE%B515%E5%B7%B79%E8%99%9F/@24.1690219,120.6784943,17z/data=!3m1!4b1!4m5!3m4!1s0x346917dbd3c38179:0x995b7989130cc635!8m2!3d24.169017!4d120.680683?hl=zh-TW">
+                            台中市北屯區綏遠路二段15巷9-3號</a>
+
+
+                    </div>
+                </ul>
+            </div>
+            <hr>
+            <div class="ftBox">
+                <div class="ftTitle">最新消息</div>
+                <ul>
+                    <div>獲得最新消息 ，優惠活動及更多。</div><br>
+                </ul>
+                <div>
+                    <input type="email" name="" id="" placeholder="請輸入信箱">
+                    <button id="sub">訂閱</button>
+
+
+                </div>
+            </div>
+        </main>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.077433541003!2d120.67849431498928!3d24.169016984384704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917dbd3c38179%3A0x995b7989130cc635!2zNDA25Y-w5Lit5biC5YyX5bGv5Y2A57aP6YGg6Lev5LqM5q61MTXlt7c56Jmf!5e0!3m2!1szh-TW!2stw!4v1625213913965!5m2!1szh-TW!2stw"
+            width="500" height="375" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+
+    </footer>
+    <div class="end">
+
+    </div>
+    <script src="/js/index.js"></script>
+    <!-- <script src="/js/animation.js"></script> -->
+    <script src="js/0702-toggleList.js"></script>
+</body>
+
+</html>

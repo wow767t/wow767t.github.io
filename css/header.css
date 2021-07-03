@@ -1,0 +1,233 @@
+@font-face {
+    font-family:"SourceHanSerifTC-Regular";
+    src: url("/font/SourceHanSerifTC-Regular.otf");
+}
+
+* a{
+    text-decoration: none;
+    
+}
+* a:link{
+    color: antiquewhite;
+}
+* a:visited{
+    color: antiquewhite;
+}
+
+body{
+    margin: 0px;
+    background-color: rgba(153, 153, 153, 0.466);
+    background-blend-mode: lighten ;
+    background-image: url(/img/superMarket.jpg);
+    background-size: cover;
+    font-family: 'SourceHanSerifTC-Regular';
+}
+
+.hd1{
+    display: flex;
+    height: 40px;
+    background-color: #001391;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px;
+
+    
+}
+
+.promotion{
+    flex: none;
+    font-size: 16px;
+}
+
+.hd2{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: #d2d2d29a;
+    padding: 10px;
+}
+.hd2>#logo{
+    flex: none;
+    align-items: center;
+
+}
+.hd2>#searchBar{
+    flex: auto;
+}
+    
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(65, 65, 65, 0.774);
+    background-blend-mode: multiply ;
+    padding: 5px;
+    box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.39);
+}
+
+nav>hr{
+    margin: 0%;
+}
+.navItem{
+    flex: none;
+    font-size: 18px;
+    color:white;
+    text-shadow: 0.1em 0.1em 0.2em #333 ;
+    /* font-weight: bold; */
+    padding: 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+
+main{  /*容器*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: 1500px; */
+    /* border: rgb(148, 148, 148) solid;  */
+}
+.pdBox{
+    flex: none;
+    width: 450px;
+    background-color: rgba(250, 240, 228, 0.822);
+    margin: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 15px;
+    box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.39);
+}
+
+
+
+@media (max-width:1200px) {
+    .pdBox{
+        width: 40%;
+    }
+    nav{
+        width: auto;
+
+    }
+
+}
+@media (max-width:500px) {
+    .pdBox{
+        width: 90%;
+    }
+    nav{
+        width: auto;
+
+    }
+
+}
+
+#pdImg{
+    width: 100%;
+    height: auto;
+    object-fit:cover;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.548);
+}
+.pdTitle{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 0px;
+}
+
+.pdDesc{
+    padding: 10px;
+    
+}
+
+.wantBuy{
+    padding-top: 20px;
+}
+
+.pdPrice{
+    color: red;
+    font-size: 30px;
+    padding-left: 5px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+    position: relative;
+    top: 8px;
+}
+
+main input{
+    padding: 6px;
+    margin: 10px;
+}
+.btnOri{
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+}
+.btnHover:hover{
+    box-shadow: 1px 4px 7px 0px rgba(0, 0, 0, 0.39);
+    /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+}
+#addCart{
+    padding: 5px;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    background-color: rgba(34, 34, 34, 0.774);
+    background-blend-mode: multiply ;
+    padding: 50px;
+}
+.end{
+    background-color: rgba(34, 34, 34, 0.774);
+    background-blend-mode: multiply ;
+    padding: 10px;
+}
+.end div{
+}
+
+.ftBox{
+    flex: none;
+    width: 300px;
+    padding: 10px;
+}
+
+.ftTitle{
+    font-size: 22px;
+    color: white;
+    padding-bottom: 20px;
+}
+.ftTitle > div{
+    color: wheat;
+}
+ul div{
+    color: rgb(211, 211, 211);
+    position: relative;
+    left: -35px;
+    padding: 5px;
+}
+
+.ftTitle > #ftHr{
+    border: none;
+    height: 1px;
+    background-color: #fa0;
+}
+
+#sub{
+    font-size: 14px;
+    padding: 5px;
+}
+@media (max-width:1200px) {
+    .ftBox{
+        width: 40%;
+    }
+
+}
+@media (max-width:500px) {
+    .ftBox{
+        width: 100%;
+    }
+}

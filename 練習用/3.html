@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <style>
+        .ani{
+            width: 200px;
+            height: 200px;
+            background-color: #fa0;
+        }
+        .wrap a{
+            display: block;
+            text-decoration: none;
+            text-align: center;
+        }
+        .wrap p ul {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button id="add">Click</button> <button id="remove">remove</button> 
+    <button id="tog">Toggle</button>
+    <hr>
+    <div class="wrap">
+        <p><a href="">下拉式選單</a></p>
+        <ul>
+            <li><a href="">選單1</a></li>
+        </ul>
+
+    </div>
+    <script>
+        $(function(){
+            $('.wrap > p > a').mouseenter(function(){
+                // console.log($(this));
+                console.log($(this).children('ul'));
+                $(this).children('ul').slideDown(300);
+
+            })
+
+            $('#add').click(function(){
+                console.log($('div'));
+                $('div').addClass('ani');
+            });
+
+            $('#remove').click(function(){
+                $('div').removeClass();
+            });
+
+            $('#tog').click(function(){
+                $('div').toggleClass();
+            });
+        });
+        
+    </script>
+</body>
+</html>
