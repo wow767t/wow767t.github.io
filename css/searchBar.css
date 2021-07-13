@@ -1,4 +1,54 @@
-#searchBar{
-    margin: auto;
-    max-width: 300px;
+header{
+    margin: 0;
+    height: 100px;
+    background-color: rgba(34, 34, 34, 0.774);
+    background-blend-mode: multiply ;
+    box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.39);
+    
+}
+.search {
+    float: right;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    
+
+
+    background-color: #f6e58dd2;
+    margin-right: 5%;   
+    margin-top: 20px;
+
+}
+.searchTxt{
+    font-size: 18px;
+    color: black;
+    padding: 0;
+
+    background: none;
+    border: none;
+    outline: none;
+    line-height: 35px;
+
+    width: 0;
+    transition: 0.5s; /*展開動畫速度*/
+}
+#searchBtn{
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    color: black;
+
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search:hover > #searchBtn{
+    background-color: white;
+}
+.search:hover > .searchTxt{
+    width: 150px;
+    padding: 0 6px;
 }

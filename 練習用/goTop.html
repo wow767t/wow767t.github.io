@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="/searchBox/fontawesome-free-5.15.3-web/css/all.css">
+
+    <title>aside bar</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgba(153, 153, 153, 0.466);
+            background-blend-mode: lighten;
+            background-image: url(/img/superMarket.jpg);
+            background-size: cover;
+        }
+
+        .goBar {
+            width: 100px;
+            height: auto;
+
+            /* background-color: aquamarine; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            /*位置*/
+            position: fixed;
+            right: 0;
+            top: 40%;
+
+        }
+
+        .goTop {
+            margin: 10px;
+            width: 80px;
+            height: 80px;
+            box-shadow: 5px 5px 5px 0px rgb(0, 0, 0);
+            background-color: #fa6;
+            text-align: center;
+
+
+        }
+
+        #goBtn {
+            text-decoration: none;
+        }
+
+        .abUs {
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            border: white solid 5px;
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+        }
+
+        .topBtn {
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+            border: white solid 5px;
+            position: fixed;
+            bottom: 30px;
+            right: 3%;
+            opacity: 0.4;
+
+            text-align: center;
+        }
+
+        #arrow {
+            text-decoration: none;
+            color: aliceblue;
+            margin-top: 20%;
+            font-size: 45px;
+        }
+
+        .topBtn:hover {
+            opacity: 1;
+        }
+
+        p {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mark">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit veritatis accusantium iure labore nesciunt
+            autem animi, voluptate necessitatibus aperiam reiciendis distinctio molestias eligendi. Sunt voluptate dolor
+            id sit vero aliquid?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit veritatis accusantium iure labore nesciunt
+            autem animi, voluptate necessitatibus aperiam reiciendis distinctio molestias eligendi. Sunt voluptate dolor
+            id sit vero aliquid?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit veritatis accusantium iure labore nesciunt
+            autem animi, voluptate necessitatibus aperiam reiciendis distinctio molestias eligendi. Sunt voluptate dolor
+            id sit vero aliquid?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit veritatis accusantium iure labore nesciunt
+            autem animi, voluptate necessitatibus aperiam reiciendis distinctio molestias eligendi. Sunt voluptate dolor
+            id sit vero aliquid?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit veritatis accusantium iure labore nesciunt
+            autem animi, voluptate necessitatibus aperiam reiciendis distinctio molestias eligendi. Sunt voluptate dolor
+            id sit vero aliquid?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit veritatis accusantium iure labore nesciunt
+            autem animi, voluptate necessitatibus aperiam reiciendis distinctio molestias eligendi. Sunt voluptate dolor
+            id sit vero aliquid?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit veritatis accusantium iure labore nesciunt
+            autem animi, voluptate necessitatibus aperiam reiciendis distinctio molestias eligendi. Sunt voluptate dolor
+            id sit vero aliquid?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit veritatis accusantium iure labore nesciunt
+            autem animi, voluptate necessitatibus aperiam reiciendis distinctio molestias eligendi. Sunt voluptate dolor
+            id sit vero aliquid?</p>
+
+    </div>
+
+    <div class="goBar">
+
+        <div class="goTop">
+            <a href="" id="goBtn">Line</a>
+        </div>
+
+        <div class="goTop">
+            <a href="" id="goBtn">Line</a>
+        </div>
+        <div class="goTop">
+            <a href="" id="goBtn">
+                <i id="arrow" class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+
+    </div>
+    <footer class="bom">
+        <div class="topBtn">
+            <a href="">
+                <i id="arrow" class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        $(function () {
+            // 隱藏back top按鈕
+            $('.topBtn').hide();
+            // 隱藏 asideBar back top按鈕
+            let btnHide = $('.goBar > .goTop')[2];
+            $(btnHide).hide();
+
+            // 測試按鈕
+            let tryBtn = $('.goBar > .goTop')[1];
+            $(tryBtn).on('click', function () {
+                $(btnHide).fadeIn();
+            });
+            // fade in
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $(btnHide).fadeIn();
+                } else {
+                    $(btnHide).fadeOut();
+                }
+            });
+            // click to top
+            $(btnHide).on('click', function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 1000);
+            })
+
+
+
+            // fade in
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('.topBtn').fadeIn();
+                    } else {
+
+                        $('.topBtn').fadeOut();
+                    }
+                });
+            });
+
+            // click to top
+            $('.topBtn').on('click', function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 800);
+            });
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

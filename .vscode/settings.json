@@ -1,0 +1,10 @@
+{
+    "prettier.alignObjectProperties": false,
+    
+    "prettier.graphqlEnable": [
+
+
+        "graphql"
+    ],
+    "editor.formatOnSave": true
+}

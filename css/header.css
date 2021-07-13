@@ -60,7 +60,7 @@ nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgba(65, 65, 65, 0.774);
+    background-color: rgba(34, 34, 34, 0.774);
     background-blend-mode: multiply ;
     padding: 5px;
     box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.39);
@@ -88,6 +88,7 @@ main{  /*容器*/
     justify-content: center;
     /* height: 1500px; */
     /* border: rgb(148, 148, 148) solid;  */
+    visibility: hidden;
 }
 .pdBox{
     flex: none;
