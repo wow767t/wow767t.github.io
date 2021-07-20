@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "SourceHanSerifTC-Regular";
+            src: url("/font/SourceHanSerifTC-Regular.otf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+
+
+
+        }
+
+        .container {
+            width: 100%;
+            background-color: rgba(70, 65, 70, 0.65);
+            font-family: 'SourceHanSerifTC-Regular';
+
+
+            position: absolute;
+            bottom: 0%;
+        }
+
+        .ftBox {
+            float: left;
+
+            margin: 10px;
+            width: 200px;
+            height: 100px;
+            background-color: #fa6;
+        }
+
+        .ftBoxFix {
+            clear: both;
+        }
+
+        li {
+            /* 拿掉點 */
+            list-style: none;
+            font-size: 12px;
+            line-height: 1;
+            padding: 5px;
+
+        }
+
+        #About {
+            width: 400px;
+
+        }
+
+        ul>div {
+            border-bottom: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <footer>
+
+        <div class="container">
+            <div class="ftBox" id="About">
+                <ul>
+                    <div>About us</div>
+                    <li>Lorem ipsum dolor, sit amet consectetur </li>
+                    <li>adipisicing elit. Suscipit molestiae,</li>
+                    <li>necessitatibus maiores molestias dolorem </li>
+                    <li>quae vitae, maxime aspernatur iusto aliquam </li>
+                </ul>
+            </div>
+            <div class="ftBox"></div>
+            <div class="ftBox"></div>
+            <div class="ftBox"></div>
+            <div class="ftBoxFix"></div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 960px;
+            background-color: #fa0;
+            margin: auto;
+
+        }
+
+        .col {
+            width: 280px;
+            margin: 10px;
+            padding: 10px;
+
+            background-color: rgb(116, 116, 116);
+            float: left;
+
+        }
+
+        .col img {
+            width: 100%;
+        }
+
+        .boxfix {
+            clear: both;
+            /* 跑到浮動物件的最下方 */
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="container">
+        <div class="col">
+            <img class="float" src="https://fakeimg.pl/250x150/aaa/000">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores at hic sequi, aut dolorum
+                blanditiis illo maiores ipsam nemo aliquid porro consectetur! Cumque voluptas aut fugit quaerat iure
+                debitis.</p>
+        </div>
+        <div class="col">
+            <img class="float" src="https://fakeimg.pl/250x150/aaa/000">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores at hic sequi, aut dolorum
+                blanditiis illo maiores ipsam nemo aliquid porro consectetur! Cumque voluptas aut fugit quaerat iure
+                debitis.</p>
+        </div>
+        <div class="col">
+            <img class="float" src="https://fakeimg.pl/250x150/aaa/000">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores at hic sequi, aut dolorum
+                blanditiis illo maiores ipsam nemo aliquid porro consectetur! Cumque voluptas aut fugit quaerat iure
+                debitis.</p>
+        </div>
+        <div class="boxfix"></div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>純CSS3彈出式選單</title>
+    <meta property="og:title" content="CSS3 Transition 3D選單效果" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image"
+        content="http://csscoke.com/wp-content/uploads/2014/07/css3-TRANSITION-3d-menu-375x300.jpg" />
+    <meta property="og:url" content="http://csscoke.com/2014/07/25/css3-transition-3d-menu/" />
+    <meta property="og:site_name" content="CSS可樂" />
+    <meta property="og:description"
+        content="CSS3 menu憑藉著 CSS3 的 transition 屬性，就能輕鬆達到一些以往需要使用程式才能達到的效果，且更快更方便！在這篇文章所提供的5個範例中，當作基本學習範例來說應該是很簡單的，各位可以看看影片出來的效果或者是直接點擊下方連結來看看實際頁面效果．" />
+    <meta property="fb:app_id" content="1390931607802842" />
+    <meta property="og:locale" content="zh_TW" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: arial, san-serf;
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        .menu {
+            margin: 50px auto 0;
+        }
+
+        .menu ul {
+            text-align: center;
+        }
+
+        .menu li {
+            display: inline;
+        }
+
+        .menu a {
+            display: inline-block;
+            height: 16px;
+            position: relative;
+            top: 0;
+            box-shadow: 0 0 0 rgba(0, 0, 0, .3);
+            padding: 10px 20px;
+            margin: 0 8px;
+            text-decoration: none;
+            background-color: #ccc;
+            border-radius: 6px;
+            color: #FFF;
+        }
+
+        .menu a.now,
+        .menu a.now:hover {
+            background-color: #c7f2c0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+            color: #395335;
+        }
+
+        .menu a:hover {
+            background-color: #aaa;
+            color: #FFF;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, .4) inset, 0 0 20px rgba(0, 0, 0, .4) inset;
+            top: 3px;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #00a5cc;
+        }
+
+        .sub1 {
+            font-size: 0;
+        }
+
+        .sub1 li {
+            display: inline-block;
+            position: relative;
+        }
+
+        .sub1 a {
+            display: inline-block;
+            font-size: 15px;
+            padding: 10px 30px;
+            background-color: #00a5cc;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav .sub2 {
+            position: absolute;
+            left: -4000px;
+            width: 200px;
+            margin-top: -35px;
+            z-index: -1;
+            text-align: left;
+            opacity: .5;
+            padding-top: 10px;
+            transition: opacity .2s, margin-top .2s, left 0s .2s;
+        }
+
+        nav .sub2:before {
+            position: absolute;
+            z-index: 1;
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            top: 0;
+            left: 50px;
+            border-bottom: 10px solid #0385a3;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+
+        nav .sub2:after {
+            position: absolute;
+            z-index: 1;
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            top: 1px;
+            left: 50px;
+            border-bottom: 10px solid #00a5cc;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+
+        nav .sub2 li {
+            display: block;
+        }
+
+        .sub1>li:hover .sub2 {
+            left: 0;
+            opacity: 1;
+            margin-top: 0;
+            transition: opacity .5s .1s, margin-top .5s, left 0s 0s;
+        }
+
+        .sub2 a {
+            display: block;
+            border-top: 1px dotted #fff;
+        }
+
+        .sub2 a:hover {
+            background-color: #e5f4f9;
+            color: #00a5cc;
+        }
+
+        .sub2 li {
+            border-left: 1px solid #0385a3;
+            border-right: 1px solid #0385a3;
+        }
+
+        .sub2 li:first-child {
+            border-top: 1px solid #0385a3;
+        }
+
+        .sub2 li:last-child {
+            border-bottom: 1px solid #0385a3;
+        }
+
+        .sub2 li:first-child a {
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><a href="transition-menu0.html">DEMO1</a></li>
+            <li><a href="transition-menu1.html" class="now">DEMO2</a></li>
+            <li><a href="transition-menu2.html">DEMO3</a></li>
+            <li><a href="transition-menu3.html">DEMO4</a></li>
+            <li><a href="transition-menu4.html">DEMO5</a></li>
+        </ul>
+    </div>
+    <h1>DEMO2</h1>
+    <nav>
+        <ul class="sub1">
+            <li><a href="http://csscoke.com">CSS可樂</a></li>
+            <li><a href="http://csscoke.com/category/css3/">CSS3</a>
+                <ul class="sub2">
+                    <li><a href="http://csscoke.com/2013/12/09/strike/">繪製撞擊點圖示</a></li>
+                    <li><a href="http://csscoke.com/2013/12/23/css-menu/">3D對開式CSS3選單</a></li>
+                    <li><a
+                            href="http://csscoke.com/2013/09/21/%E4%BD%BF%E7%94%A8css3-nth-childn-%E9%81%B8%E5%8F%96%E5%99%A8%E8%A9%B3%E8%A7%A3/">nth-child選取器</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="http://csscoke.com/tag/原創/">Amos原創</a>
+                <ul class="sub2">
+                    <li><a href="http://csscoke.com/2014/02/20/css3-icon/">CSS3膠囊</a></li>
+                    <li><a href="http://csscoke.com/2013/12/16/css3-pokemon-ball/">神奇寶貝球</a></li>
+                    <li><a href="http://csscoke.com/2013/11/20/css3_mac_beach_ball/">彩虹球</a></li>
+                </ul>
+            </li>
+            <li><a href="http://csscoke.com/tag/教學/">教學</a>
+                <ul class="sub2">
+                    <li><a
+                            href="http://csscoke.com/2013/09/22/%e4%bd%bf%e7%94%a8before-%e8%88%87-after%e4%be%86%e8%a3%bd%e4%bd%9c%e5%8f%af%e5%88%97%e5%8d%b0%e7%9a%84logo%e5%9c%96%e7%89%87/">製作可列印的Logo</a>
+                    </li>
+                    <li><a href="http://csscoke.com/2014/01/22/icon-font-photoshop/">在Photoshop中使用icon font</a></li>
+                    <li><a href="#">nth-child選取器</a></li>
+                </ul>
+            </li>
+            <li><a href="http://csscoke.com/category/css/">CSS</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-43927413-1', 'csscoke.com');
+    ga('send', 'pageview');
+
+</script>
+
+</html>

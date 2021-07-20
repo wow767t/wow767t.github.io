@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.menu a {
+    text-decoration: none;    
+    color: black;
+}
+.menu {
+    border: 1px solid #f00;
+    background-color: #ccc;
+}
+.menu .title{
+    display: flex;
+    
+    
+}
+.title:hover + .menu .titleList{
+    display: block;
+}
+.menu .titleList{
+    display: none;
+    width: 150px;
+    height: 250px;
+    background-color: #fd6;
+}
+
+/* 標題 */
+.menu ul > p{
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+}

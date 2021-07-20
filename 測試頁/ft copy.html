@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keeping</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f1f1f1;
+            position: relative;
+            padding-bottom: 58px;
+            min-height: 100vh;
+            border: 5px solid #f00;
+        }
+
+        header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 50px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        header p {
+            font-size: 22px;
+        }
+
+        main {
+            width: 90vw;
+            margin: 0 auto;
+            padding: 30px 20px;
+            /* min-height: calc(100vh - 211px - 58px); */
+        }
+
+        article {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        article:last-child {
+            margin-bottom: 0;
+        }
+
+        article h3 {
+            margin: 10px 0 25px 0;
+        }
+
+        article p {
+            margin-top: 16px;
+            line-height: 24px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* position: fixed;
+  z-index: 1; */
+        }
+
+        @media(max-width:768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 36px;
+                margin-bottom: 22px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            main {
+                width: 100vw;
+                padding: 20px;
+            }
+
+            article {
+                margin-bottom: 16px;
+                font-size: 14px;
+            }
+
+            article h3 {
+                margin: 10px 0 20px 0;
+            }
+
+            article p {
+                margin-top: 16px;
+                line-height: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Website</h1>
+        <p>Probably the best website in the world</p>
+    </header>
+    <main>
+        <article>
+            <h2>TITLE HEADING</h2>
+            <h3>Title Description - Mar 10, 2019</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit consectetur dolor blanditiis quae illum
+                corporis minima voluptas id maiores ducimus inventore hic quasi sequi quidem nobis tempora accusantium
+                sapiente nam amet voluptatum perferendis aliquid quibusdam, sed tenetur?</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </article>
+    </main>
+    <footer>
+        <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script>, Coding Journey
+        </p>
+    </footer>
+</body>
+
+</html>

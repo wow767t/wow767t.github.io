@@ -30,6 +30,7 @@ header{
     line-height: 35px;
 
     width: 0;
+    
     transition: 0.5s; /*展開動畫速度*/
 }
 #searchBtn{
@@ -49,6 +50,6 @@ header{
     background-color: white;
 }
 .search:hover > .searchTxt{
-    width: 150px;
+    width: 100px;
     padding: 0 6px;
 }

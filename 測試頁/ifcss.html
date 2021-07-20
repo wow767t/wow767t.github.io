@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #fa0;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #ab6;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <button class="tst">tt</button>
+    <script>
+        $('.tst').on('click', function () {
+            if ($('.box2').is('visible') == false) {
+                $('.box2').css('display', 'block').animate('all', '0.5s');
+                console.log($('.box').is('visible'));
+            } else {
+                $('.box2').css('display', 'none');
+                console.log($('.box').is('visible'));
+            }
+        });
+
+    </script>
+</body>
+
+</html>

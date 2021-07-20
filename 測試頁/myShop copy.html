@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小專首頁</title>
+    <style>
+        body {
+            background-color: rgba(153, 153, 153, 0.466);
+            background-blend-mode: lighten;
+            background-image: url(/img/superMarket.jpg);
+
+            background-size: cover;
+
+            height: 100vh;
+            position: relative;
+
+        }
+
+        .wrapper {
+            min-height: 100vh;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <div class="headerPage"></div>
+        <!-- header -->
+
+
+        <!-- content -->
+        <div class="content"></div>
+        <!-- content -->
+
+        <!-- footer -->
+        <div class="footerPage"></div>
+        <!-- footer -->
+    </div>
+
+    <script>
+        $(function () {
+            $('.headerPage').load('/myElm/nav/header02.html');
+            $('.footerPage').load('/myElm/footer/footer01.html');
+
+            $('.content').load('/myElm/fakeitem.html');
+
+            // navBtn:訂購
+
+        });
+    </script>
+</body>
+
+</html>

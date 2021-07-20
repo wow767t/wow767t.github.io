@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/searchBox/fontawesome-free-5.15.3-web/css/all.css">
+    <script src="/js/jquery-3.6.0.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>身分驗證</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .vwrap {
+
+            text-align: center;
+            width: 560px;
+            background-color: #ccc;
+            margin: auto;
+            margin-top: 150px;
+            margin-bottom: 200px;
+            padding: 20px;
+            border: 1px solid black;
+
+            position: relative;
+
+        }
+
+        .itemV {
+            display: flex;
+            justify-content: center;
+        }
+
+        .closeV {
+            width: 25px;
+            height: 25px;
+            border: 1px solid black;
+            background-color: #fff;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        h2 {
+            padding: 10px;
+        }
+
+        .itemV input {
+            width: 250px;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #x {
+            font-size: 14px;
+            line-height: 25px;
+            color: black !important;
+        }
+
+        .codeBox {
+            width: 150px;
+            height: 43px;
+            /* background-color: #ff6; */
+            background: url("https://picsum.photos/300/200?random=1");
+            border: 1px solid rgba(0, 0, 0, 0.65);
+            box-sizing: border-box;
+        }
+
+        .codeBox span {
+            font-size: 35px;
+            font-style: italic;
+            line-height: 43px !important;
+            color: #fff !important;
+            text-shadow: rgb(46, 46, 46) 0px 5px 5px;
+        }
+
+        /* 輸入驗證碼 */
+        #codeAns {
+            /* font-size: 18px; */
+        }
+
+        .f5 {
+            width: 25px;
+            height: 25px;
+            line-height: 43px;
+        }
+    </style>
+</head>
+
+<body id="vertify">
+    <div class="vwrap">
+
+        <div class="itemV">
+            <h2>註冊基本資料</h2>
+        </div>
+        <div class="itemV closeV">
+            <a href="#">
+                <i id="x" class="fas fa-times"></i>
+            </a>
+        </div>
+
+        <form action="/myElm/body/order.html" onsubmit="check()">
+            <div class="itemV">
+                <input type="text" name="realname" placeholder="請輸入姓名"><br>
+            </div>
+            <div class="itemV">
+                <input type="tel" name="tel" placeholder="請輸入電話"><br>
+            </div>
+            <div class="itemV">
+                <input type="text" name="addr" placeholder="請輸入地址"><br>
+            </div>
+            <!-- 隨機驗證碼 -->
+            <div class="itemV">
+                <div class="codeBox">
+                    <strong><span id="code"></span></strong>
+                </div>
+
+                <a href="#" class="f5">
+                    <i class="fas fa-redo"></i>
+                </a>
+
+            </div>
+            <!-- 輸入驗證碼 -->
+            <div class="itemV">
+                <input type="text" name="code" id="codeAns" placeholder="請輸入驗證碼"><br>
+            </div>
+            <div class="itemV">
+                <input type="submit" value="送出" id="submitBtn">
+            </div>
+
+
+        </form>
+    </div>
+
+    <script>
+
+        $(function () {
+            // 關閉視窗
+            $('#x').on('click', function () {
+                var i = $('.vwrap').css('display', 'none');
+            });
+
+            // 隨機驗證碼
+            var code = "";
+            // 驗證碼長度
+            var codeLength = 4;
+            var codeChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+            for (var i = 0; i < codeLength; i++) {
+                var num = codeChar[Math.floor(Math.random() * (codeChar.length))];
+                code += num
+            }
+            $('#code').text(`${code}`);
+
+            // 刷新驗證碼
+            $('.f5').on('click', function () {
+                code = "";
+                for (var i = 0; i < codeLength; i++) {
+                    var num = codeChar[Math.floor(Math.random() * (codeChar.length))];
+                    code += num
+                }
+                $('#code').text(`${code}`);
+                var n1 = Math.floor(Math.random() * 1000);
+                $('.codeBox').css('background-image', 'url("https://picsum.photos/300/200?random=2")');
+                $('.codeBox').css('background-image', 'url("https://picsum.photos/300/200?random=3")');
+            });
+        });
+        // 送出按鈕
+        $('#submitBtn').on('click', function check() {
+            var vCode = $('#code').text().toLowerCase();
+            var Ans = $('#codeAns').val().toLowerCase();
+            if (vCode == Ans) {
+                alert('註冊成功')
+
+
+            } else {
+                alert('驗證碼錯誤')
+
+
+
+
+                return false;
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

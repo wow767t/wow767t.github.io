@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link rel="stylesheet" href="/css/reset.css"> -->
+    <link rel="stylesheet" href="/searchBox/fontawesome-free-5.15.3-web/css/all.css">
+    <script src="/js/jquery-3.6.0.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "SourceHanSerifTC-Regular";
+            src: url("/font/SourceHanSerifTC-Regular.otf");
+        }
+
+        /* * {
+            margin: 0;
+            padding: 0;
+            font-family: 'SourceHanSerifTC-Regular';
+        } */
+
+        body {
+            margin: 0;
+            padding: 0;
+            padding-top: 70px;
+            padding-bottom: 70px;
+            font-family: 'SourceHanSerifTC-Regular';
+        }
+
+        .menu {
+            background-color: rgba(0, 0, 0, 0.575);
+            text-align: left;
+            /* font-size: 0; */
+            /* 高50 */
+            margin: auto;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white !important;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+
+        .menu a:hover {
+            background-color: black;
+        }
+
+        .navBtn {
+            float: right;
+            line-height: 50px;
+        }
+
+        .menu i {
+            font-size: 20px;
+            color: white !important;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="menu">
+        <a href="#">冷凍食品</a>
+        <a href="#">蔬菜水果</a>
+        <a href="#">肉類</a>
+        <a href="#">寵物食品</a>
+        <a href="#" id="order">訂購</a>
+        <a href="/myShop.html">回首頁</a>
+        <div class="navBtn">
+
+            <i class="fas fa-search"></i>
+            <i class="far fa-comment"></i>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <i class="fas fa-cart-arrow-down"></i>
+        </div>
+    </nav>
+
+    <!-- navBtn:訂購 -->
+    <div class="makeOrder"></div>
+
+
+    <!-- <button class="test" style="position: absolute; top: 1400px; padding: 20px;">test</button> -->
+    <script>
+        $(function () {
+            // 
+            $('#order').on('click', function () {
+                $('.makeOrder').load('/myElm/body/vertify.html');
+            });
+        });
+    </script>
+</body>
+
+</html>

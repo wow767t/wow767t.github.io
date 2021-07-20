@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        body {
+            background-color: rgba(153, 153, 153, 0.466);
+            background-blend-mode: lighten;
+            background-image: url(/img/superMarket.jpg);
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+        }
+
+        .orderWrap {
+            display: flex;
+            width: 960px;
+            margin: auto;
+
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 450px;
+        }
+
+        .contentBox {
+            background-color: #ccc;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.205);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            width: 600px;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .blankBox {
+            border-radius: 10px;
+            width: 600px;
+            padding: 20px;
+            margin: 0px;
+        }
+
+        .contentBox .h3,
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <link rel="import" href="/nav/header01.html">
+</head>
+
+<body>
+    <!-- header -->
+
+    <div class="headerPage"></div>
+    <!-- header over-->
+
+    <div class="orderWrap">
+        <form action="Order" method="GET">
+
+            <div class="contentBox">
+                <h3>訂購人姓名</h3>
+                <input type="text" name="realname" placeholder="您的回答" value="value">
+                <input type="submit" value="修改" name="edit">
+            </div>
+            <div class="contentBox">
+
+                <h3>聯絡電話</h3>
+                <input type="tel" name="tel" id="" placeholder="您的回答">
+                <input type="submit" value="修改" name="edit">
+            </div>
+            <div class="contentBox">
+                <h3>宅配地址</h3>
+                <input type="text" name="addr" placeholder="您的回答">
+                <input type="submit" value="修改" name="edit">
+            </div>
+            <div class="contentBox">
+                這區資料用匯入
+                <h3>水餃</h3>
+                <input type="radio" name="product0" id="" value="1">1包
+                <input type="radio" name="product0" id="" value="2">2包
+                <input type="radio" name="product0" id="" value="3">3包
+                <input type="radio" name="product0" id="" value="4">4包
+                <input type="radio" name="product0" id="" value="5">5包
+            </div>
+
+            <div class="contentBox">
+                <h3>希望宅配抵達時間</h3>
+                <input type="text" name="datepicker" class="calendar">
+                <script>
+                    $('.calendar').datepicker({
+
+                    });
+                </script>
+            </div>
+
+            <div class="blankBox">
+                <input type="submit" value="送出">
+            </div>
+
+
+        </form>
+    </div>
+
+    <!-- footer -->
+    <div class="footerPage"></div>
+    <!-- footer -->
+
+
+    <script>
+        $(function () {
+            // import header
+            $('.headerPage').load('/myElm/nav/header02.html');
+            $('.footerPage').load('/myElm/footer/footer01.html');
+        });
+    </script>
+</body>
+
+</html>

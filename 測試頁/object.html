@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100%;
+
+            margin-bottom: -200px;
+        }
+
+        .contentBox {
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.205);
+            width: 600px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .blankBox {
+            border-radius: 10px;
+            width: 600px;
+            padding: 20px;
+            margin: 0px;
+        }
+    </style>
+    <script src="/js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="Order" method="GET">
+
+            <div class="blankBox">
+                <h2>訂單系統</h2>
+            </div>
+
+            <div class="contentBox">
+                <h3>訂購人姓名</h3>
+                <input type="text" name="name" placeholder="您的回答">
+                <input type="submit" value="修改" name="edit">
+            </div>
+            <div class="contentBox">
+
+                <h3>聯絡電話</h3>
+                <input type="tel" name="tel" id="" placeholder="您的回答">
+                <input type="submit" value="修改" name="edit">
+            </div>
+            <div class="contentBox">
+
+                <h3>宅配地址</h3>
+                <input type="text" name="addr" placeholder="您的回答">
+                <input type="submit" value="修改" name="edit">
+            </div>
+            <div class="contentBox">
+                這區資料用匯入
+                <h3>水餃</h3>
+                <input type="radio" name="product0" id="" value="1">1包
+                <input type="radio" name="product0" id="" value="2">2包
+                <input type="radio" name="product0" id="" value="3">3包
+                <input type="radio" name="product0" id="" value="4">4包
+                <input type="radio" name="product0" id="" value="5">5包
+            </div>
+            <div class="blankBox">
+                <input type="submit" value="送出">
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script>
+        $(function () {
+            // import header
+
+            // import footer
+        });
+    </script>
+</body>
+
+</html>

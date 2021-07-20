@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .codeBox {
+            width: 150px;
+            height: 50px;
+            background-color: #fa6;
+            text-align: center;
+        }
+
+        span {
+            font-size: 35px;
+            font-style: italic;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form action="" onsubmit="表單送出"> -->
+
+
+    <div class="itemV">
+        <div class="codeBox">
+            <strong><span id="code"></span></strong>
+        </div>
+    </div>
+    <div class="itemV">
+        <input type="text" name="code" placeholder="請輸入驗證碼" id="codeAns"><br>
+    </div>
+    <div class="itemV">
+        <button class="b01">test</button>
+    </div>
+    <!-- </form> -->
+
+    <script>
+        $(function () {
+
+            // 產生驗證碼
+            // 驗證碼長度
+            var code = "";
+            var codeLength = 4;
+            var codeChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+            for (var i = 0; i < codeLength; i++) {
+                var num = codeChar[Math.floor(Math.random() * (codeChar.length))];
+                code += num
+            }
+            $('#code').text(`${code}`);
+            console.log(code);
+            // 產生驗證碼
+
+            $('.b01').on('click', function () {
+                var c = $('#code').text();
+                console.log(c);
+
+                var a = $('#codeAns').val();
+                console.log(a);
+
+                console.log(c == a);
+            });
+        });
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

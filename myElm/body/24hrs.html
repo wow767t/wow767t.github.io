@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/myElm/body/rotateAnimate.js"></script>
+    <link rel="stylesheet" href="/searchBox/fontawesome-free-5.15.3-web/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: black !important;
+        }
+
+        .title {
+            width: 300px;
+            /* border: 6px solid rgb(240, 143, 143); */
+            box-sizing: border-box;
+            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+            background-color: rgba(250, 240, 228, 0.822);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+
+        }
+
+        .title:hover {
+            color: #f00 !important;
+        }
+
+        /* 外框 */
+        .wrap {
+            width: 960px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 450px;
+
+            /* border: 6px solid #f00; */
+        }
+
+        /* 外框 */
+
+        /* 內容Box */
+        .item {
+            width: 300px;
+            margin: 10px;
+            box-sizing: border-box;
+            background-color: rgba(250, 240, 228, 0.822);
+            box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.39);
+            margin-top: 20px;
+            padding: 10px;
+            position: relative;
+            /* border: #f00 2px solid; */
+        }
+
+        /* 圖框 */
+        .img {
+            width: 280px;
+            height: 190px;
+            overflow: hidden;
+        }
+
+        /* 圖 */
+        .item img {
+            width: 280px;
+            height: 190px;
+            box-sizing: border-box;
+            transition: all 0.5s;
+        }
+
+        .item img:hover {
+            transform: scale(1.2);
+            transition: all 0.5s;
+        }
+
+        /* 圖文 */
+        .picTitle {
+            font-style: italic;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            color: rgb(255, 249, 195) !important;
+            font-size: 30px;
+            text-shadow: rgb(82, 82, 82) 4px 3px 0px;
+        }
+
+        /* 內文 */
+        .itemContent article {
+            width: 280px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            margin: 5px 0 40px 0;
+            /* display: none; */
+        }
+
+        /* 圖框標籤 */
+        .item .tab {
+            background-color: #f00;
+            color: #fff !important;
+            padding: 5px 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        /* 價錢標籤 */
+        .item .moneyTab {
+            color: rgb(221, 0, 0) !important;
+            text-shadow: rgb(177, 177, 177) 1px 1px 2px;
+            position: absolute;
+            left: 10px;
+            bottom: -5px;
+        }
+
+        /* 按鈕美化 */
+        .actionBtn {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: 5px 10px 10px 10px;
+            padding: 5px;
+        }
+
+        .actionBtn button {
+            margin-left: 5px;
+            transition: all 0.7s;
+            z-index: 99;
+
+        }
+
+        .actionBtn button:hover {
+            /* box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.39); */
+            transform: scale(1.1);
+            transition: all 0.7s;
+            box-shadow: 0 0 0 1px #fa0;
+            background-color: rgb(255, 254, 184);
+
+        }
+
+        .actionBtn a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>24h快速到貨</h1>
+    </div>
+    <div class="wrap">
+
+        <!-- 商品1 -->
+        <div class="item">
+            <div class="tab">滿額免運費</div>
+            <div class="img">
+                <a href="#">
+                    <img src="https://picsum.photos/300/200?random=1">
+                </a>
+            </div>
+            <div class="moneyTab">
+                <h3>$ <span id="price">500</span></h3>
+            </div>
+            <h2 class="picTitle">Promotion</h2>
+            <div class="itemContent">
+                <article>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                </article>
+            </div>
+
+            <div class="actionBtn">
+                <!-- 收藏按鈕 -->
+                <button id="collection"><a href="#">收藏商品 <span><i class="far fa-heart"></i></span></a></button>
+                <!-- 購物車按鈕 -->
+                <button id="cart"><a href="#">加入購物車 <span><i class="fas fa-cart-arrow-down"></i></span></a></button>
+            </div>
+        </div>
+
+        <!-- 商品2 -->
+        <div class="item">
+            <div class="tab">滿額免運費</div>
+            <div class="img">
+                <a href="#">
+                    <img src="https://picsum.photos/300/200?random=2">
+                </a>
+            </div>
+            <div class="moneyTab">
+                <h3>$ <span id="price">500</span></h3>
+            </div>
+            <h2 class="picTitle">日本和牛</h2>
+            <div class="itemContent">
+                <article>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                </article>
+            </div>
+
+            <div class="actionBtn">
+                <!-- 收藏按鈕 -->
+                <button id="collection"><a href="#">收藏商品 <span><i class="far fa-heart"></i></span></a></button>
+                <!-- 購物車按鈕 -->
+                <button id="cart"><a href="#">加入購物車 <span><i class="fas fa-cart-arrow-down"></i></span></a></button>
+            </div>
+        </div>
+
+        <!-- 商品3 -->
+        <div class="item">
+            <div class="tab">滿額免運費</div>
+            <div class="img">
+                <a href="#">
+                    <img src="https://picsum.photos/300/200?random=3">
+                </a>
+            </div>
+            <div class="moneyTab">
+                <h3>$ <span id="price">500</span></h3>
+            </div>
+            <h2 class="picTitle">Promotion</h2>
+            <div class="itemContent">
+                <article>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                </article>
+            </div>
+
+            <div class="actionBtn">
+                <!-- 收藏按鈕 -->
+                <button id="collection"><a href="#">收藏商品 <span><i class="far fa-heart"></i></span></a></button>
+                <!-- 購物車按鈕 -->
+                <button id="cart"><a href="#">加入購物車 <span><i class="fas fa-cart-arrow-down"></i></span></a></button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        $(function () {
+
+            $('#test').on('click', function () {
+                // var i = Math.floor(Math.random() * 9);
+                // console.log(i);
+                var n1 = Math.floor(Math.random() * 9);
+                var n2 = Math.floor(Math.random() * 9);
+                var n3 = Math.floor(Math.random() * 9);
+                console.log($('.img').html(`<img src="https://picsum.photos/id/${n1}${n2}${n3}/300/200">`));
+                $('body').load($('.img').html(`<img src="https://picsum.photos/id/${n1}${n2}${n3}/300/200">`));
+            });
+            // 隨機價錢
+            var price = Math.floor(Math.random() * 1000);
+            $('#price').text(price);
+
+
+            // 滑鼠進入換愛心美化
+            $('#collection').mouseenter(function () {
+                $('#collection span').html('<i class="fas fa-heart"></i>');
+            });
+            $('#collection').mouseleave(function () {
+                $('#collection span').html('<i class="far fa-heart"></i>');
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

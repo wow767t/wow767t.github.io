@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="/searchBox/fontawesome-free-5.15.3-web/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header03</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        .nav {
+            background-color: rgba(0, 0, 0, 0.575);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .navTitle {
+            display: flex;
+        }
+
+        /* nav 標題 */
+        .navTitle>li {
+            padding: 10px 20px;
+            position: relative;
+            width: 140px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .navTitle>li:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navTitle a {
+            text-decoration: none;
+            color: white !important;
+            font-size: 20px;
+        }
+
+        /* 下拉式選單 */
+        .titleList {
+            width: 140px;
+            padding: 5px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: rgba(255, 255, 255);
+            border: 1px solid black;
+            display: none;
+
+
+        }
+
+        .titleList>li {
+            margin: 5px;
+            padding: 10px 0;
+            color: black !important;
+            font-size: 18px !important;
+        }
+
+        /* 功能按鈕 */
+        .navBtn {
+            float: right;
+            position: absolute;
+            right: 20px;
+            line-height: 50px;
+        }
+
+        .navBtn a {
+            margin: 0 20px;
+        }
+
+        .navBtn a i {
+            color: #ccc !important;
+        }
+    </style>
+</head>
+
+<body id="header03">
+    <div class="nav">
+        <ul class="navTitle">
+            <!-- 標題1 -->
+            <li><a href="#">冷凍冷凍</a>
+                <ul class="titleList">
+                    <li>冷藏飲品</li>
+                    <li>冷凍料理包</li>
+                    <li>微波食品</li>
+                </ul>
+            </li>
+
+            <!-- 標題2 -->
+            <li><a href="#">蔬菜水果</a>
+                <ul class="titleList">
+                    <li>水果</li>
+                    <li>葉菜</li>
+                    <li>有機</li>
+                    <li>菇菌</li>
+                </ul>
+            </li>
+
+            <!-- 標題3 -->
+            <li><a href="#">肉類</a>
+                <ul class="titleList">
+                    <li>豬肉</li>
+                    <li>禽肉</li>
+                    <li>牛肉</li>
+                    <li>其他</li>
+                </ul>
+            </li>
+
+            <!-- 標題4 -->
+            <li><a href="#">寵物食品</a>
+                <ul class="titleList">
+                    <li>豬肉</li>
+                    <li>禽肉</li>
+                    <li>牛肉</li>
+                    <li>其他</li>
+                </ul>
+            </li>
+
+            <!-- 標題5 -->
+            <li><a href="#" id="order">訂購</a></li>
+
+            <!-- 標題6 -->
+            <li><a href="/myShop.html">回首頁</a></li>
+            <!-- nav End -->
+            <div class="navBtn">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="far fa-comment"></i></a>
+                <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+                <a href="#"><i class="fas fa-cart-arrow-down"></i></a>
+
+            </div>
+        </ul>
+
+        <!-- nav 區域 -->
+    </div>
+    <!-- navBtn:訂購 -->
+    <div class="makeOrder"></div>
+    <script>
+        $(function () {
+            $('.navTitle > li').mouseenter(function () {
+                $(this).children('ul').stop(true, false);
+                console.log($(this).children('ul').slideDown(300));
+            });
+
+            $('.navTitle > li').mouseleave(function () {
+                console.log($(this).children('ul').slideUp(300));
+            });
+            //  
+            $('#order').on('click', function () {
+                $('.makeOrder').load('/myElm/body/vertify.html');
+            });
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>

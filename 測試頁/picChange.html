@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <style>
+        .wrap {
+            width: 300px;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            background-image: url("https://picsum.photos/id/1/300/200");
+            transition: all 0.7s;
+
+        }
+
+        .box:hover {
+
+            transform: scale(1.1);
+            transition: all 0.7s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+    </div>
+    <button class="test">test</button>
+    <img src="https://picsum.photos/300/200?random=2">
+    <img src="https://picsum.photos/300/200?random=1">
+    <img src="https://picsum.photos/300/200?random=3">
+    溫柔設備地點玄幻開口轉變有意關西早上他的，你們陽光加強相當歡迎消費保證俱樂部公開，簡歷企業心靈顯然就有體育拿出經歷公斤外掛忍不住我現在，比例軟體廠家稱為有的溫度招聘靈魂新技術不停中文，採訪治療隱藏版最大，報紙採用製品會計醫療眼睛，一些味道，本來心中無比素。
+
+
+    <script>
+        $('.test').on('click', function () {
+
+
+            var n1 = Math.floor(Math.random() * 1000);
+            var change = `'url("https://picsum.photos/id/${n1}/300/200")'`;
+
+            // $('.box').css('background-image', 'url("https://picsum.photos/id/5/300/200")');
+            $('.box').css('background-image', `${change}`);
+            console.log(`${change}`);
+            // console.log($('.box').css('background-image', `'url("https://picsum.photos/id/${n1}/300/200")'`));
+        });
+    </script>
+</body>
+
+</html>

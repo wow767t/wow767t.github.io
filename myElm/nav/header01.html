@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/searchBox/fontawesome-free-5.15.3-web/css/all.css">
+    <script src="/js/jquery-3.6.0.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "SourceHanSerifTC-Regular";
+            src: url("/font/SourceHanSerifTC-Regular.otf");
+        }
+
+        body {
+
+            margin: 0;
+            background-color: rgb(102, 202, 161);
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            background-color: rgba(70, 65, 70, 0.65);
+            /* box-shadow: 1px 4px 5px 0px rgba(0, 0, 0, 0.39); */
+
+            font-family: 'SourceHanSerifTC-Regular';
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.746);
+
+        }
+
+        .navMid {}
+
+        /* nav 右邊按鈕 */
+        .navR {
+            position: absolute;
+            right: 100px;
+        }
+
+        .navR>#searchBar {
+            position: absolute;
+            top: 20px;
+            right: 200px;
+        }
+
+        .navBtn {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background-color: aliceblue;
+            opacity: 0.4;
+            margin: 5px;
+        }
+
+        .navBtn i {
+            color: black;
+            /* font-weight: 900; */
+            /* font-family: Font Awesome 5 Pro; */
+            /* font-variant: normal; */
+
+            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 測試按鈕 */
+        #t01Btn {
+            position: absolute;
+            top: 1400px;
+        }
+
+        /* nav選單 */
+        .navRight {
+            position: absolute;
+            left: 20px;
+        }
+
+        .navRight>ul>li {
+            display: inline-block;
+            margin: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 專案 a標籤 -->
+    <link rel="stylesheet" href="/css/a_link_style.css">
+    <header>
+        <!-- Logo -->
+        <nav class="navMid">
+            <a href="">鮮入為煮</a>
+        </nav>
+        <!-- 功能Btn -->
+        <nav class="navR">
+
+            <!-- <div id="searchBar"></div> -->
+            <div class="navBtn">
+                <i class="fa-solid fa-steak"></i>
+            </div>
+            <div class="navBtn">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="navBtn">
+                <!-- <i class="fa-solid fa-user"></i> -->
+                <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+                <i class="fa-solid fa-comment-dots"></i>
+            </div>
+            <div class="navBtn">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+            </div>
+
+        </nav>
+
+        <!-- nav 選單 -->
+        <nav class="navRight">
+            <ul>
+                <li>
+                    <a href="">冷凍食品</a>
+                </li>
+                <li>
+                    蔬菜 / 水果
+                </li>
+                <li>
+                    肉品 / 海鮮
+                </li>
+                <li>
+                    寵物食品
+                </li>
+                <li>
+                    訂購
+                </li>
+            </ul>
+        </nav>
+        <i class="fa-thin fa-steak"></i>
+        <i class="fa-solid fa-fork"></i>
+        <i class="fa-solid fa-cart-arrow-down"></i>
+
+
+
+
+
+        <!-- <button id="t01Btn">測試按鈕</button> -->
+
+
+    </header>
+    <script>
+        $(function () {
+            // import : search bar
+            $('#searchBar').load("/searchBox/searchBox1.html");
+        });
+    </script>
+</body>
+
+</html>
