@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="/searchBox/fontawesome-free-5.15.3-web/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .plus {
+            transform: rotate(405deg);
+        }
+
+        .content {
+            font-size: 30px;
+        }
+
+        .red {
+            color: #f00;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="itemContent">
+        <div class="tit"> <strong>24h快速到貨</strong>
+        </div>
+        <a id="plusBtn" href="#"><i class="fas fa-plus"></i></a>
+        <i class="fas fa-plus" id="plus"></i>
+        <article>
+            <p id="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+        </article>
+        <button id="btn">test</button>
+    </div>
+    <script>
+        $('#btn').click(function () {
+            $('#lorem').toggleClass("plus").toggleClass("content");
+
+        });
+
+        $(document).ready(function () {
+            $('#lorem').addClass("red")
+        });
+
+    </script>
+</body>
+
+</html>

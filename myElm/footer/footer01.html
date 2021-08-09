@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>footer01</title>
     <style>
         @font-face {
             font-family: "SourceHanSerifTC-Regular";
             src: url("/font/SourceHanSerifTC-Regular.otf");
         }
 
-        li {
+        .ftBox>ul>li {
             color: white !important;
             font-family: 'SourceHanSerifTC-Regular';
             font-size: 14px !important;
-            opacity: 0.8;
+        }
+
+        .ftBox>ul>li>a {
+            color: #fff !important;
         }
 
 
@@ -72,7 +75,11 @@
         #About,
         #map {
             width: 400px;
+            margin-left: 50px;
+        }
 
+        #contact {
+            width: 300px;
         }
     </style>
 </head>
@@ -110,12 +117,11 @@
                 </ul>
             </div>
 
-            <div class="ftBox">
+            <div class="ftBox" id="contact">
                 <ul>
                     <p>聯絡我們 Contact us</p>
-                    <li>電話</li>
-                    <li>信箱</li>
-                    <li>智慧財產權</li>
+                    <li><a href="tel:+886-912345678" id="myLink">0912-345-678</a></li>
+                    <li><a href="mailto:shop123456@iCloud.com">shop123456@iCloud.com</a></li>
                 </ul>
             </div>
             <div class="ftBox" id="map">
